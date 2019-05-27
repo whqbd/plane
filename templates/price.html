@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="/static/css/base.css">
+  <link rel="stylesheet" href="/static/css/top.css">
+  <link rel="stylesheet" href="/static/css/index.css">
+  <link rel="stylesheet" href="/static/css/jedate.css">
+  <script  type="text/javascript" src="/static/js/jedate.js"></script>
+ 
+</head>
+
+<body>
+   <div class="title">
+     <p>智能机票比较系统</p>
+  </div>
+  <div class="nav">
+    <div class="nav-box">
+    <ul class="change">
+        <li><a href="/home">首页</a></li>
+        <li><a href="">热点新闻</a></li>
+        <li class="active"><a href="/price">智能比价</a></li>
+        <li><a href="/website">航司官网</a></li>
+        <li><a href="">假期</a></li>
+        <li><a href="">联系我们</a></li>
+    </ul>
+    <ul>
+        <li><a href="">登录</a> |</li>
+        <li><a href="">注册</a></li>
+    </ul>
+  </div>
+  </div>
+  <div class="main">
+    <div class="info">
+      <div class="info-title">航班信息查询</div><div class="triangle"></div>
+    </div>
+    <div class="serch-box">
+      <div class="serch-title">航班信息——单程</div>
+      <div class="serch-wrap">
+        <ul class="title-info">
+          <li>出发点</li>
+          <li>终点</li>
+          <li>选择日期</li>
+        </ul>
+         <ul class="serch-select">
+           <li>
+            <input type="text" >
+           </li>
+           <li>
+            <input type="text">
+           </li>
+           <li>
+              <input type="text" class="jeinput" id="date">
+           </li>
+         </ul>
+         <div class="serch-b">
+            <button class="serch-btn">查询</button>
+         </div>
+        
+    </div>
+  </div>
+
+  <div class="info">
+      <div class="info-title">航班信息——单程</div><div class="triangle"></div>
+   </div>
+
+   <div class="info-box">
+      <ul class="boxwrap">
+         <li>航班信息</li>
+         <li>起飞时间</li>
+         <li>到达时间</li>
+         <li>经历时间</li>
+         <li>经济舱价格</li>
+         <li>准时率</li>
+      </ul>
+   </div>
+   <div class="info">
+      <div class="info-title">crtip</div><div class="triangle"></div>
+   </div>
+
+   <div class="trip-box">
+     <a href="/echarts?name=1111">
+      <ul class="trip-tab">
+          <li>sc8812</li>
+          <li class="trip-time">
+            <p>07:25 </p>
+            <span>白云机场</span>
+          </li>
+          <li class="trip-time">
+              <p>09:25</p>
+              <span>深圳机场</span>
+          </li>
+          <li>4h50min</li>
+          <li>￥3080</li>
+          <li>100%</li>
+       </ul>
+      </a>
+   </div>
+   <div class="trip-box">
+      <a onclick="info()">
+        <ul class="trip-tab">
+            <li>sc8812</li>
+            <li class="trip-time">
+              <p>07:25 </p>
+              <span >白云机场</span>
+            </li>
+            <li class="trip-time">
+                <p>09:25</p>
+                <span>深圳机场</span>
+            </li>
+            <li>4h50min</li>
+            <li>￥3080</li>
+            <li>100%</li>
+         </ul>
+        </a>
+   </div>
+   <div onclick="getinfo()" class="trip-box">
+      <a href="">
+        <ul class="trip-tab">
+            <li>sc8812</li>
+            <li class="trip-time">
+              <p>07:25 </p>
+              <span>白云机场</span>
+            </li>
+            <li class="trip-time">
+                <p>09:25</p>
+                <span>深圳机场</span>
+            </li>
+            <li>4h50min</li>
+            <li>￥3080</li>
+            <li>100%</li>
+         </ul>
+        </a>
+   </div>
+   <div class="trip-box">
+      <a href="./echarts.html">
+        <ul class="trip-tab">
+            <li>sc8812</li>
+            <li class="trip-time">
+              <p>07:25 </p>
+              <span>白云机场</span>
+            </li>
+            <li class="trip-time">
+                <p>09:25</p>
+                <span>深圳机场</span>
+            </li>
+            <li>4h50min</li>
+            <li>￥3080</li>
+            <li>100%</li>
+         </ul>
+        </a>
+   </div>
+   <div class="info">
+      <div class="info-title">南方航空</div><div class="triangle"></div>
+   </div>
+
+   <div class="trip-box">
+      <a href="./echarts.html">
+        <ul class="trip-tab">
+            <li>sc8812</li>
+            <li class="trip-time">
+              <p>07:25 </p>
+              <span>白云机场</span>
+            </li>
+            <li class="trip-time">
+                <p>09:25</p>
+                <span>深圳机场</span>
+            </li>
+            <li>4h50min</li>
+            <li>￥3080</li>
+            <li>100%</li>
+         </ul>
+        </a>
+   </div>
+  </div>
+
+  <script src="/static/js/jquery-3.3.1.min.js"></script>
+
+  <script>
+     //时间选择器插件
+      jeDate("#date",{
+         format: "YYYY-MM-DD"
+     });
+
+      $(function() {
+         /* $.ajax({
+              type: "POST",
+              url: "http://127.0.0.1:8800/echarts",
+              dataType: "json",
+              data: {'name': 'testname'},
+              success: function (data) {
+                  if (data.success) {
+                      $("#createResult").html(data.msg);
+                  } else {
+                      $("#createResult").html("出现错误" + data.msg);
+                  }
+              },
+              error: function (jqXHR) {
+                  console.log("发生错误：" + jqXHR.status);
+              }
+          });*/
+      })
+
+     function info(){
+       $.ajax({
+            type:"POST",
+            url:"http://127.0.0.1:8800/echarts",
+            dataType:"json",
+            data:{ name:'testname'},
+            success:function(data){
+               alert(111)
+            },
+            error:function(jqXHR){
+                console.log("发生错误："+jqXHR.status);
+            }
+          });
+      }
+
+      function getinfo(){
+          var name ="testname"
+       $.ajax({
+            type:"get",
+            url:"http://127.0.0.1:8800/echarts?name="+name,
+
+            success:function(data){
+               alert(111)
+            },
+            error:function(jqXHR){
+                console.log("发生错误："+jqXHR.status);
+            }
+          });
+      }
+
+
+   </script>
+</body>
+
+</html>

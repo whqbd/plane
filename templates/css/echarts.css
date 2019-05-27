@@ -1,0 +1,90 @@
+
+
+.main {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  padding-top: 0;
+}
+
+.info {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.info .info-title {
+  height: 26px;
+  width: 300px;
+  background: #cdcdcd;
+  border-radius: 8px 0 0 8px;
+  color: #008bcb;
+  text-align: center;
+  display: inline-block;
+  line-height: 26px;
+}
+
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 13px 0 13px 13px;
+  border-style: solid;
+  vertical-align: bottom;
+  border-color: transparent transparent transparent #cdcdcd;
+  /*透明 透明 透明 灰*/
+}
+
+.see {
+  margin-top: 10px;
+  color: red
+}
+
+.info-box .boxwrap {
+  border: 1px solid #dbeff9;
+  display: flex;
+  height: 25px;
+  justify-content: space-around
+}
+
+.info-box .boxwrap li {
+  line-height: 25px;
+}
+
+.trip-box {
+  margin-bottom: 20px;
+}
+
+.trip-box .trip-tab {
+  height: 90px;
+  justify-content: space-around;
+  border: 1px solid #008bcd;
+  display: flex;
+}
+
+.trip-box .trip-tab li {
+  margin-top: 40px;
+}
+
+.trip-box .trip-tab .trip-time {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.trip-box .trip-tab .trip-time p {
+  font-weight: bold;
+
+}
+
+.echarts {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  background: #f3f3f3;
+}
+
+.echarts .echarts-list {
+  width: 390px;
+  margin-bottom: 20px;
+  height: 305px;
+  padding: 10px;
+}
